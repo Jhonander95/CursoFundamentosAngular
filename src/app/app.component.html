@@ -3,10 +3,19 @@
 <button (click)="toggle()" >Toggle Button</button>
 <p>Edad {{ person.age }}</p>
 <button (click)="increaseAge()" >Age ++</button>
+<div class="box" (scroll)="onScroll($event)" >
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eligendi rem, sequi omnis quisquam ducimus distinctio aliquam quo consequuntur. Atque, id dolorem. Eaque iusto esse officiis porro amet alias error.
+  Repudiandae assumenda recusandae nesciunt, dolorum sequi ratione, delectus voluptas magnam doloremque voluptatem maiores corrupti explicabo necessitatibus minima commodi nisi alias modi dolor? Ex earum, consequatur officia optio tempora accusantium eligendi.
+  Praesentium placeat ex eius aspernatur, ut asperiores facilis corporis? Ad facilis laboriosam vel omnis cupiditate, doloremque nobis, culpa aliquam molestias inventore laudantium et, nisi repellendus. Est similique fugit beatae modi?
+  Hic dolores odit molestias fuga ducimus eveniet asperiores recusandae eaque, rerum, officia perspiciatis quod quibusdam, aut exercitationem consectetur maxime eos veritatis? Recusandae, velit veniam. Explicabo quisquam accusamus temporibus voluptatibus fuga.
+  Laborum, error mollitia! Delectus vel qui ducimus temporibus odio iusto, similique reiciendis eligendi sunt voluptas corrupti ea at deserunt facilis, ipsum perspiciatis, atque autem tempora quam. Earum mollitia nam dolores.
+</p>
+</div>
 <hr>
 <h1>Propiedades</h1>
 <button [disabled]="btnDisabled" >Enviar</button>
-<input type="text" [value]="person.name">
+<p>Edad {{ person.name }}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
 <progress max="100" [value]="person.age"  ></progress>
 <img [src]="person.avatar" alt="Gatito" [width]="sizeProfile">
 <hr>
